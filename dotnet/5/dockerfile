@@ -13,7 +13,8 @@ RUN         apt-get update -y \
 
 RUN wget https://dot.net/v1/dotnet-install.sh \ 
     && chmod +x dotnet-install.sh \
-    && ./dotnet-install.sh -c Current
+    && ./dotnet-install.sh -c 5.0 \
+    && export DOTNET_ROOT="/home/container/.dotnet"
 
 
 USER        container
