@@ -11,13 +11,10 @@ RUN         apt-get update -y \
             && apt-get update -y \
             && apt-get install -y libgdiplus
 
-RUN curl -SL --output dotnet.tar.gz https://dotnetcli.azureedge.net/dotnet/Runtime/6.0.0/dotnet-runtime-6.0.0-linux-arm64.tar.gz \
-    && mkdir -p /dotnet \
-    && tar -ozxf dotnet.tar.gz -C /dotnet \
-    && rm dotnet.tar.gz
+RUN wget https://dot.net/v1/dotnet-install.sh \ 
+    && chmod +x dotnet-install.sh \
+    && ./dotnet-install.sh -c Current
 
-RUN export DOTNET_ROOT=$HOME/dotnet-64
-RUN export PATH=$HOME/dotnet-64:$PATH
 
 USER        container
 ENV         USER=container HOME=/home/container
