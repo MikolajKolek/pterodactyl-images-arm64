@@ -1,4 +1,4 @@
-name: build java
+name: build dotnet
 on: 
   push: 
   workflow_dispatch: 
