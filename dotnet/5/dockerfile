@@ -13,7 +13,7 @@ RUN         apt-get update -y \
 
 RUN wget https://dot.net/v1/dotnet-install.sh \ 
     && chmod +x dotnet-install.sh \
-    && ./dotnet-install.sh -c 5.0 \
+    && ./dotnet-install.sh -c 5.0
 
 ENV DOTNET_ROOT="/home/container/.dotnet" 
 ENV PATH="/home/container/.dotnet:${PATH}"
