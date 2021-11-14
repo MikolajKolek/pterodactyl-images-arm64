@@ -9,7 +9,7 @@ RUN         apt-get update -y \
             && dpkg -i packages-microsoft-prod.deb \
             && rm packages-microsoft-prod.deb \
             && apt-get update -y \
-            && apt-get install -y libgdiplus libgcc-s1 libgssapi-krb5-2 libssl1.1 libstdc++6 zlib1g
+            && apt-get install -y libgdiplus libgssapi-krb5-2 libssl1.1 libstdc++6 zlib1g
 
 RUN wget https://dot.net/v1/dotnet-install.sh \ 
     && chmod +x dotnet-install.sh \
