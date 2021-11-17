@@ -16,8 +16,6 @@ RUN         wget https://dot.net/v1/dotnet-install.sh \
             && mkdir -p /dotnet \
             && ./dotnet-install.sh -c 5.0 -InstallDir /dotnet
 
-RUN         ls -la /dotnet
-
 ENV         DOTNET_ROOT="/dotnet" 
 ENV         PATH="/dotnet:${PATH}"
 
