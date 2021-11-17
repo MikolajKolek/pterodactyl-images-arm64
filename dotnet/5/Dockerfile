@@ -11,12 +11,15 @@ RUN         apt-get update -y \
             && apt-get update -y \
             && apt-get install -y libgdiplus libgssapi-krb5-2 libssl1.1 libstdc++6 zlib1g
 
-RUN wget https://dot.net/v1/dotnet-install.sh \ 
-    && chmod +x dotnet-install.sh \
-    && ./dotnet-install.sh -c 5.0
+RUN         wget https://dot.net/v1/dotnet-install.sh \ 
+            && chmod +x dotnet-install.sh \
+            && ./dotnet-install.sh -c 5.0
 
-ENV DOTNET_ROOT="/home/container/.dotnet" 
-ENV PATH="/home/container/.dotnet:${PATH}"
+RUN         ls -la /home/container/
+RUN         ls -la /home/container/.dotnet
+
+ENV         DOTNET_ROOT="/home/container/.dotnet" 
+ENV         PATH="/home/container/.dotnet:${PATH}"
 
 USER        container
 ENV         USER=container HOME=/home/container
