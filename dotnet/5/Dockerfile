@@ -13,8 +13,9 @@ RUN         apt-get update -y \
 
 RUN         wget https://dot.net/v1/dotnet-install.sh \ 
             && chmod +x dotnet-install.sh \
-            && ./dotnet-install.sh -c 5.0
-COPY        "/home/container/.dotnet" "/dotnet"
+            && mkdir -p /dotnet \
+            && ./dotnet-install.sh -c 5.0 -InstallDir /dotnet
+
 RUN         ls -la /dotnet
 
 ENV         DOTNET_ROOT="/dotnet" 
