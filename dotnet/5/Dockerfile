@@ -14,12 +14,11 @@ RUN         apt-get update -y \
 RUN         wget https://dot.net/v1/dotnet-install.sh \ 
             && chmod +x dotnet-install.sh \
             && ./dotnet-install.sh -c 5.0
+COPY        "/home/container/.dotnet" "/dotnet"
+RUN         ls -la /dotnet
 
-RUN         ls -la /home/container/
-RUN         ls -la /home/container/.dotnet
-
-ENV         DOTNET_ROOT="/home/container/.dotnet" 
-ENV         PATH="/home/container/.dotnet:${PATH}"
+ENV         DOTNET_ROOT="/dotnet" 
+ENV         PATH="/dotnet:${PATH}"
 
 USER        container
 ENV         USER=container HOME=/home/container
