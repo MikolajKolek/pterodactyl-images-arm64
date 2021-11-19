@@ -1,7 +1,11 @@
-name: build debian
-on: 
-  push: 
-  workflow_dispatch: 
+name: build oses
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * 1"
+  push:
+    paths:
+      - oses/**
 jobs:
   push:
     name: "Push"

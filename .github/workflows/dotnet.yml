@@ -1,7 +1,11 @@
 name: build dotnet
-on: 
-  push: 
-  workflow_dispatch: 
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * 1"
+  push:
+    paths:
+      - dotnet/**
 jobs:
   push:
     name: "Push"
