@@ -10,7 +10,8 @@ RUN ln -s /home/container/ /nonexistent
 ENV USER=container HOME=/home/container
 
 ## update base packages
-RUN apt-get -y update
+RUN apt-get -y update \
+    && apt-get -y upgrade
 
 ## install dependencies
 RUN apt-get -y install gcc g++ libgcc1 libgcc1 libc++-dev gdb libc6 git wget curl tar zip unzip binutils xz-utils liblzo2-2 cabextract iproute2 net-tools netcat telnet libatomic1 libsdl1.2debian libsdl2-2.0-0 \
