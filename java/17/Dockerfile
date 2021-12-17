@@ -1,4 +1,4 @@
-FROM        eclipse-temurin:16
+FROM        eclipse-temurin:17
 
 RUN			apt-get -y update
 RUN         apt-get -y install ca-certificates curl fontconfig git bash openssl sqlite tar tzdata \

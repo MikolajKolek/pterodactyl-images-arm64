@@ -1,4 +1,4 @@
-FROM        adoptopenjdk:8-jre-hotspot
+FROM        eclipse-temurin:8
 
 RUN			apt-get -y update
 RUN         apt-get -y install ca-certificates curl fontconfig git bash openssl sqlite tar tzdata \
