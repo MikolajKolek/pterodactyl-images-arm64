@@ -1,5 +1,8 @@
 FROM    mono:5-slim
 
+RUN     apt-get -y update \
+        && apt-get -y upgrade
+
 RUN     apt update -y \
         && apt install -y apt-transport-https ca-certificates curl \
         && apt install -y iproute2 \
