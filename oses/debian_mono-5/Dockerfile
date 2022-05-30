@@ -1,7 +1,7 @@
 FROM    mono:5-slim
 
-RUN     apt install -y apt-transport-https ca-certificates
 RUN     apt update -y \
+        && apt install -y apt-transport-https ca-certificates curl \
         && apt install -y iproute2 \
         && useradd -d /home/container -m container
 
