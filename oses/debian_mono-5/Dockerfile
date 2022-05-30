@@ -1,4 +1,4 @@
-FROM    mono:5-slim
+FROM    mono:slim
 
 RUN     cd /usr/lib/apt/methods
 RUN     ln -s http https
