@@ -1,5 +1,8 @@
 FROM    mono:5-slim
 
+RUN     cd /usr/lib/apt/methods
+RUN     ln -s http https
+
 RUN     apt-get install -y apt-transport-https apt-utils
 RUN     apt-get -y update \
         && apt-get -y upgrade
