@@ -1,6 +1,6 @@
 FROM    mono:5-slim
 
-RUN     wget http://ftp.de.debian.org/debian/pool/main/a/apt/apt-transport-https_2.2.4_all.deb
+ADD     http://ftp.de.debian.org/debian/pool/main/a/apt/apt-transport-https_2.2.4_all.deb apt-transport-https_2.2.4_all.deb
 RUN     dpkg -i apt-transport-https_2.2.4_all.deb
 
 RUN     cd /usr/lib/apt/methods
