@@ -1,7 +1,7 @@
 FROM    mono:5-slim
 
-ADD     http://ftp.de.debian.org/debian/pool/main/a/apt/apt-transport-https_2.2.4_all.deb apt-transport-https_2.2.4_all.deb
-RUN     dpkg -i apt-transport-https_2.2.4_all.deb
+ADD     http://security.debian.org/debian-security/pool/updates/main/a/apt/apt-transport-https_1.4.11_arm64.deb apt-transport-https.deb
+RUN     dpkg -i apt-transport-https.deb
 
 RUN     cd /usr/lib/apt/methods
 RUN     ln -s http https
