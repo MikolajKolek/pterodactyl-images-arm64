@@ -7,4 +7,5 @@ Docker images created for ARM64 machines running Pterodactyl Minecraft or Among 
  - Java 16: `ghcr.io/mikolajkolek/images:java-16-arm64`
  - Java 17: `ghcr.io/mikolajkolek/images:java-17-arm64`
  - Dotnet 5: `ghcr.io/mikolajkolek/images:dotnet_5`
+ - Dotnet 6: `ghcr.io/mikolajkolek/images:dotnet_6`
  - Debian: `ghcr.io/mikolajkolek/images:debian`
