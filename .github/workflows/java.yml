@@ -18,6 +18,7 @@ jobs:
           - 11
           - 16
           - 17
+          - 21
     steps:
       - name: Code Checkout
         uses: actions/checkout@v2
