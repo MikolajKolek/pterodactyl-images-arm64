@@ -1,7 +1,7 @@
 FROM        eclipse-temurin:21
 
 RUN			apt-get -y update
-RUN         apt-get -y install ca-certificates curl fontconfig git bash openssl sqlite tar tzdata \
+RUN         apt-get -y install ca-certificates curl fontconfig git bash openssl sqlite3 tar tzdata \
 			    && adduser --disabled-password --home /home/container container
 
 USER        container
